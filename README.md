@@ -10,7 +10,7 @@ GraphQL based Server for CEEST Algorithm
     "unit_power_cost": 100
 }
 ```
-[ **total_mips [ Million Instructions Per Second ]** ]- It represents total amount of computer power that server will have. 
+[ **total_mips (Million Instructions Per Second)** ] - It represents total amount of computer power that server will have. 
 
 [ **unit_power_cost** ]- The cost of electricity required to power a single server unit, such as a rack-mounted server or blade server. This cost can include the cost of the electricity itself, as well as the cost of cooling the server to prevent overheating. It depends on various factor such as location, so it has to configured manually.
 
@@ -21,16 +21,12 @@ You can visulize whole documentation by running this server using
 
 
 
+### Set-Up your database for saving virtual machine details and task details.
+
+Include you mongodb uri in `env` file as `DB_URL='your-mongodb-uri-for-accessing-the-database.'`  
 
 
-## Central Server will control every other server that is connected(+authenticated) in real time.
 
-Use of Central Server ---
-
-1. Get total resources, used resources,all details of each virutal machine + task.
-2. Add+Schedule new task in most optimal connected server using CEEST algorithm.
-3. Scale virtual machines if it result in cost cutting.
-4. Virually shut down any of connected server (if there is no task listed in it).
 
 
 
