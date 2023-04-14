@@ -4,10 +4,8 @@ dotenv.config();
 console.log(process.env.DB_URL);
 
 
-
-
 const dbConnect = async () => {
-    await mongoose.connect("mongodb+srv://ankit-pn:qwertyuiop@file-data.hmhtm.mongodb.net/authDB?retryWrites=true&w=majority");
+    await mongoose.connect(process.env.DB_URL);
     console.log('Successfully connected to MongoDB Atlas!');
 };
 dbConnect().catch(err => {

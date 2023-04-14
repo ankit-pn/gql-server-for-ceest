@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const vmSchema = new mongoose.Schema({
-    vmId: {
+    vm_id: {
         type: String,
         require: [true, "VmId Not Found"],
         unique: [true, "VmId Already Exists "],
@@ -10,27 +10,18 @@ const vmSchema = new mongoose.Schema({
         require: [true, "VM Name Not Found"],
         unique: [true, "VmName Already Exists"]
     },
-    vmWeight: {
-        type: Number,
-        required: [true, "Vm Weight Exists"]
-    },
     vmMips: {
         type: Number,
         required: [true, "Vm mips already Found"]
     },
-    vmCurrentServer: {
-        // required:[true,"We need Current Server Of This Virtual Machine Before Inserting it into that server"],
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Servers'
+    server_id:{
+        type: String,
+        required: [true, "Please Provide Current Server Id"]
     },
     task: [{
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Tasks'
-        }],
-    status: {
-        type: Boolean,
-        required: [true, "Please Provide Status Of Virtual Machine"]
-    }
+    }]
 });
 var VMS;
 if ('VMS' in mongoose.models) {
