@@ -10,8 +10,9 @@ GraphQL based Server for CEEST Algorithm
     "unit_power_cost": 100
 }
 ```
-**total_mips [ Million Instructions Per Second ]** - It represents total amount of computer power that server will have. 
-**unit_power_cost** - The cost of electricity required to power a single server unit, such as a rack-mounted server or blade server. This cost can include the cost of the electricity itself, as well as the cost of cooling the server to prevent overheating. It depends on various factor such as location, so it has to configured manually.
+[ **total_mips [ Million Instructions Per Second ]** ]- It represents total amount of computer power that server will have. 
+
+[ **unit_power_cost** ]- The cost of electricity required to power a single server unit, such as a rack-mounted server or blade server. This cost can include the cost of the electricity itself, as well as the cost of cooling the server to prevent overheating. It depends on various factor such as location, so it has to configured manually.
 
 ### API endpoints to retrive data about task and virtual machines from server / and make mutation if required
 
