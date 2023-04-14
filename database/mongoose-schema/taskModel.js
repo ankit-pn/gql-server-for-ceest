@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const taskSchema = new mongoose.Schema({
-    taskId: {
+    task_id: {
         type: String,
         required: [true, "Provide taskId"],
         unique: [true, "TaskId Must Be Unique"]
@@ -16,15 +16,19 @@ const taskSchema = new mongoose.Schema({
     },
     communicationCost: {
         type: Number,
-        requird: [true, 'Please Provide Communication Cost of task']
+        required: [true, 'Please Provide Communication Cost of task']
     },
-    currentVM: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'VMS'
+    taskDeadline:{
+        type: String,
+        required: [true,"Please Provide task Deadline"]
     },
-    currentServer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Servers'
+    vm_id: {
+        type: String,
+        required: [true, "Please provide current virtual machine Id"]
+    },
+    server_id: {
+        type: String,
+        required: [true,"Please Provide current server Id"]
     }
 });
 var Tasks;
