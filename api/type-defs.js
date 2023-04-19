@@ -1,5 +1,5 @@
-import { gql } from 'apollo-server-express'
-import fs from 'fs';
+const { gql } = require('apollo-server-express');
+
 const typeDefs = gql`# It is gql file for server_manager
 
 
@@ -52,4 +52,5 @@ type Query {
       vms: [VM!]!
       tasks: [Task!]!
 }`;
-export { typeDefs };
+
+module.exports = typeDefs;

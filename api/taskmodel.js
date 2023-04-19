@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 const taskSchema = new mongoose.Schema({
     task_id: {
         type: String,
@@ -38,4 +38,5 @@ if ('Tasks' in mongoose.model) {
 else {
     Tasks = mongoose.model('Tasks', taskSchema);
 }
-export { Tasks };
+
+module.exports = Tasks;

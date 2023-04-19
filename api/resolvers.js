@@ -1,8 +1,9 @@
-import { VMS } from "./vmmodel.js";
-import { Tasks } from "./taskmodel.js";
-import { v4 as uuidv4 } from "uuid";
-import { dbConnect } from "./dbConnect.js";
-import serverConfig from './config.json' assert {type: "json"};
+const VMS = require("./vmmodel.js");
+const Tasks  = require("./taskmodel.js");
+const { v4: uuidv4 } = require("uuid");
+const dbConnect = require("./dbConnect.js");
+const serverConfig = require('./config.json');
+
 dbConnect();
 const resolvers = {
     Query: {
@@ -49,4 +50,5 @@ const resolvers = {
         }
     },
 };
-export { resolvers };
+
+module.exports = resolvers;

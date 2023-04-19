@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 const vmSchema = new mongoose.Schema({
     vm_id: {
         type: String,
@@ -30,4 +30,6 @@ if ('VMS' in mongoose.models) {
 else {
     VMS = mongoose.model("VMS", vmSchema);
 }
-export { VMS };
+// export { VMS };
+
+module.exports = VMS;

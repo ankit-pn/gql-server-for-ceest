@@ -1,11 +1,11 @@
-import { ApolloServer, gql } from "apollo-server-express";
-import { typeDefs } from "./type-defs.js";
-import { resolvers } from "./resolvers.js";
+const { ApolloServer } = require("apollo-server-express");
+const typeDefs  = require("./type-defs.js");
+const resolvers = require("./resolvers.js");
 
-import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
-import http from "http";
-import express from "express";
-import cors from "cors";
+const { ApolloServerPluginDrainHttpServer } = require("apollo-server-core");
+const http = require("http");
+const express = require("express");
+const cors = require("cors");
 
 const app = express();
 app.use(cors());
@@ -28,4 +28,4 @@ const startApolloServer = async (app, httpServer) => {
 
 startApolloServer(app, httpServer);
 
-export default httpServer;
+module.exports = httpServer

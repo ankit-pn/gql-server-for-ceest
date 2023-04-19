@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 dotenv.config();
 console.log(process.env.DB_URL);
 
@@ -15,4 +15,4 @@ dbConnect().catch(err => {
 
 
 
-export { dbConnect };
+module.exports = dbConnect;
