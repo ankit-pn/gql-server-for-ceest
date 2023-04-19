@@ -1,6 +1,6 @@
 import { ApolloServer, gql } from "apollo-server-express";
-import { typeDefs } from "./schema/type-defs.js";
-import { resolvers } from "./schema/resolvers.js";
+import { typeDefs } from "../schema/type-defs.js";
+import { resolvers } from "../schema/resolvers.js";
 
 import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
 import http from "http";
