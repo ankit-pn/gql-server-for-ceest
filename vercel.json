@@ -1,8 +1,10 @@
 {
-    "functions": {
-      "./api/index.js": {
-        "memory": 3008,
-        "maxDuration": 60
-      }
-    }
-  }
+    "version": 2,
+    "name": "music-album",
+    "builds": [
+       { "src": "index.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "/" }
+    ]
+ }
