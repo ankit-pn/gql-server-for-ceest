@@ -1,5 +1,5 @@
-import { VMS } from "./vmModel.js";
-import { Tasks } from "./taskModel.js";
+import { VMS } from "./vmmodel.js";
+import { Tasks } from "./taskmodel.js";
 import { v4 as uuidv4 } from "uuid";
 import { dbConnect } from "./dbConnect.js";
 import serverConfig from './config.json' assert {type: "json"};
