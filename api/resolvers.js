@@ -1,8 +1,8 @@
-import { VMS } from "../database/mongoose-schema/vmModel.js";
-import { Tasks } from "../database/mongoose-schema/taskModel.js";
+import { VMS } from "./vmModel.js";
+import { Tasks } from "./taskModel.js";
 import { v4 as uuidv4 } from "uuid";
-import { dbConnect } from "../database/dbConnect.js";
-import serverConfig from '../config.json' assert {type: "json"};
+import { dbConnect } from "./dbConnect.js";
+import serverConfig from './config.json' assert {type: "json"};
 dbConnect();
 const resolvers = {
     Query: {
