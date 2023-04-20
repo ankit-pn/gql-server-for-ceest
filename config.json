@@ -1,6 +1,6 @@
 {
-    "server_id":"testing_this_bttch",
-    "server_name":"xnx1",
-    "total_mips": 1234567,
-    "unit_power_cost": 100
+    "server_id":"a755a3c6-e2e0-4a0e-8987-9dee62687b31",
+    "server_name":"test-server-1",
+    "total_mips": 120000,
+    "unit_power_cost": 150
 }
