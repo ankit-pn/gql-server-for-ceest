@@ -25,7 +25,11 @@ You can visulize whole documentation by running this server using
 
 Include you mongodb uri in `env` file as `DB_URL='your-mongodb-uri-for-accessing-the-database.'`  
 
+## Algorithm Repo
+[CEEST Algorithm](https://github.com/ankit-pn/CEEST-Algorithms)
 
+## CEEST WebApp Repo
+[CEEST WebApp](https://github.com/ankit-pn/CEEST-WebApp)
 
 
 
